@@ -1,10 +1,10 @@
-# element-list
+# elements
 
-Element list component
+Elements component
 
 ## Installation
 
-    $ component install enricomarino/element-list
+    $ component install enricomarino/elements
 
 ## License
 
