@@ -1,0 +1,10 @@
+{
+  "name": "elements",
+  "repo": "enricomarino/elements",
+  "description": "Elements component",
+  "version": "0.0.1",
+  "dependencies": {
+    "enricomarino/element": "*"
+  },
+  "scripts": ["index.js"]
+}
