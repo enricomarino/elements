@@ -1,21 +1,26 @@
-
 /**
- * element-list
- * Element list component
+ * elements
+ * Elements component
  * 
  * @author Enrico Marino
  * @copyright 2013 Enrico Marino
  */
 
-/*
- * Expose `ElementList`
+/**
+ * Component dependencies
  */
 
-module.expose = ElementList;
+var Element = require('element');
+
+/*
+ * Expose component
+ */
+
+module.expose = Elements;
 
 /**
- * ElementList
- * Initialize a new `List` with 
+ * Elements
+ * Initialize a new `Elements` with 
  * the given array-ish of `els` 
  * and `selector` string.
  *
@@ -24,25 +29,26 @@ module.expose = ElementList;
  * @api private
  */
 
-function ElementList(els, selector) {
-  this.list = list || [];
-  this.selector = selector;
-}
+function Elements(list) {
+  this.list  = list = [];
+};
 
 /**
- * attr
- * Get attribute `name` 
- * or set attribute `name` to `val`.
- *
- * @param {String} name
- * @param {String} [val]
- * @return {List} this for chaining
+ * use
+ * Use a plugin
+ * 
+ * @param {Function} fn plugin
+ * @return {Element} this for chaining
  * @api public
  */
 
-ElementList.prototype.attr = function(name, val) {
-  this.list.forEach(function(el) {
-    el.attr(name, val);
-  });
+Elements.use = function (fn) {
+  fn(this);
   return this;
 };
+
+/**
+ * Element
+ */
+
+Elements.element = Element;
